@@ -2,7 +2,19 @@
 eemit is a Java event emitter library
 
 ### Install
-\- todo -
+Maven:
+```xml
+<dependency>
+    <groupId>com.github.h2337</groupId>
+    <artifactId>eemit</artifactId>
+    <version>0.1.0</version>
+</dependency>
+```
+
+Gradle:
+```groovy
+implementation 'com.github.h2337:eemit:0.1.0'
+```
 
 ### Usage
 ```java
