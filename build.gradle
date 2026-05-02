@@ -14,7 +14,7 @@ plugins {
 apply plugin: 'com.bmuschko.nexus'
 
 version '0.1.0'
-group 'com.github.h2337'
+group 'com.github.aidlx'
 archivesBaseName = 'eemit'
 
 repositories {
@@ -29,28 +29,28 @@ modifyPom {
     project {
         name 'eemit'
         description 'Event emitter library for Java'
-        url 'https://github.com/h2337/eemit'
+        url 'https://github.com/aidlx/eemit'
         inceptionYear '2020'
 
         scm {
-            url 'https://github.com/h2337/eemit'
-            connection 'scm:https://github.com/h2337/eemitt.git'
-            developerConnection 'scm:git://github.com/h2337/eemit.git'
+            url 'https://github.com/aidlx/eemit'
+            connection 'scm:git:https://github.com/aidlx/eemit.git'
+            developerConnection 'scm:git:ssh://git@github.com/aidlx/eemit.git'
         }
 
         licenses {
             license {
                 name 'MIT License'
-                url 'https://raw.githubusercontent.com/h2337/eemit/master/LICENSE'
+                url 'https://raw.githubusercontent.com/aidlx/eemit/master/LICENSE'
                 distribution 'repo'
             }
         }
 
         developers {
             developer {
-                id 'h2337'
-                name 'h2337'
-                email 'h2337@gmail.com'
+                id 'aidlx'
+                name 'aidlx'
+                email '128270257+aidlx@users.noreply.github.com'
             }
         }
     }

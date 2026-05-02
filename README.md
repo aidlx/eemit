@@ -1,11 +1,11 @@
 # eemit
-eemit is a Java event emitter library. It lets you emit objects (from multiple places) of the specified type in a given channel and handle them elsewhere in code by subscribing to that channel.
+`eemit` is a small Java event emitter library. It lets you emit typed objects on named channels and handle them elsewhere in your code by subscribing to those channels.
 
 ### Install
 Maven:
 ```xml
 <dependency>
-    <groupId>com.github.h2337</groupId>
+    <groupId>com.github.aidlx</groupId>
     <artifactId>eemit</artifactId>
     <version>0.1.0</version>
 </dependency>
@@ -13,22 +13,21 @@ Maven:
 
 Gradle:
 ```groovy
-implementation 'com.github.h2337:eemit:0.1.0'
+implementation 'com.github.aidlx:eemit:0.1.0'
 ```
 
 ### Usage
 ```java
-import io.github.h2337.eemit.EventEmitter;
+import com.github.aidlx.eemit.EventEmitter;
 
 ...
 
-// Create EventEmitter with any type as an event type, here just String
+// Create an EventEmitter for any event type, here String
 EventEmitter<String> emitter = new EventEmitter<>();
 
-// Listen to events on channel "channel666", pass in a lambda that'll receive channel name and the event object
+// Listen on channel "channel666". The callback receives the channel name and event object.
 emitter.on("channel666", (channel, object) -> {
-  // Do something with object (which is String because we parameterized EventEmitter with String)
-  // "channel" argument will either be "channel666" or "*" here
+  // Do something with object
 });
 
 // Listen to events on all channels
@@ -46,6 +45,10 @@ emitter.emit("*", "Some string");
 String uuid = emitter.on("channel666", (channel, object) -> {
   // Do something with object
 });
-// Unregister callback
+// Unregister the callback later
 emitter.off(uuid);
 ```
+
+### Repository
+
+Source and issues: https://github.com/aidlx/eemit
